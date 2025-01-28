@@ -6,16 +6,19 @@ const TermekPut = () => {
     const [nev, setNev] = useState("");
     const [leiras, setLeiras] = useState("");
     const [kategoriaId, setKategoriaId] = useState(0);
+    const [keszlet, setKeszlet] = useState(0);
     
     const product = {
         ar: ar,
         nev: nev,
         leiras: leiras,
-        kategoriaId: kategoriaId
+        kategoriaId: kategoriaId,
+        keszlet: keszlet,
+        kepUrl: "https://tenor.com/hu/view/joker-batman-the-joker-why-so-serious-gif-14263650074740919861"
     } 
 
     const submit = () => {
-        apiClient.post(`/termekek`, product).then(response => {
+        apiClient.post("/termekek", product).then(response => {
             switch (response.status) {
                 case 200:
                     alert("Sikeres hozzáadás!");
@@ -38,6 +41,8 @@ const TermekPut = () => {
         <input type="text" placeholder="ar:" onChange={(e) => setAr(Number(e.target.value))} /> <br />
         <input type="text" placeholder="nev:" onChange={(e) => setNev(String(e.target.value))} /> <br />
         <input type="text" placeholder="leiras:" onChange={(e) => setLeiras(String(e.target.value))}/> <br />
+        <input type="text" placeholder="kategoriaId:" onChange={(e) => setKategoriaId(Number(e.target.value))}/> <br />
+        <input type="text" placeholder="keszlet:" onChange={(e) => setKeszlet(Number(e.target.value))}/> <br />
         <button onClick={submit}>Add hozzá!</button>
 
         

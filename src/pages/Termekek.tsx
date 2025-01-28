@@ -13,20 +13,31 @@ const Termekek = () => {
         console.error(error);
     });
 }, []);
-  return (
-    <>
-        <h1>Termékek</h1>
-        <ul>
-            {data?.map((data) => (
-            <li key={data.id}>
-                <h2>{data.nev}</h2>
-                <p>{data.leiras}</p>
-                <p>{data.ar} Ft</p>
-            </li>
-            ))}
-        </ul>
-    </>
+ 
+return (
+  <>
+    <h1>Termékek</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Név</th>
+          <th>Leírás</th>
+          <th>Ár (Ft)</th>
+          <th>Törlés</th>
+        </tr>
+      </thead>
+      <tbody>
+        {data?.map((data) => (
+          <tr key={data.id}>
+            <td>{data.nev}</td>
+            <td>{data.leiras}</td>
+            <td>{data.ar}</td>
+            <td><button>Törlés</button></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </>
   );
 };
-
 export default Termekek;
