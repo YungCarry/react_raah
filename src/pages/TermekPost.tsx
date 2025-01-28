@@ -1,5 +1,6 @@
 import { useState } from "react";
 import apiClient from "../apiClient/apiClient";
+import { error } from "console";
 
 const TermekPut = () => {
   const [ar, setAr] = useState(0);
@@ -15,7 +16,7 @@ const TermekPut = () => {
     kategoriaId: kategoriaId,
     keszlet: keszlet,
     kepUrl:
-      "https://tenor.com/hu/view/joker-batman-the-joker-why-so-serious-gif-14263650074740919861",
+      "asd",
   };
 
   const submit = () => {
