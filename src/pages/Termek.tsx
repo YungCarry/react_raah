@@ -40,7 +40,7 @@ const Termek = () => {
       });
   };
 
-  const [ar, setAr] = useState(0);
+  const [ar, setAr] = useState(data?.ar);
   const [nev, setNev] = useState(data?.nev);
   const [leiras, setLeiras] = useState(data?.leiras);
   const [kategoriaId, setKategoriaId] = useState(data?.kategoriaId);
@@ -74,7 +74,7 @@ const Termek = () => {
       .catch((error) => {
         console.error(error);
       });
-    window.location.reload();
+    console.log(product);
   };
 
   return (
