@@ -21,24 +21,18 @@ const Termekek = () => {
         <thead>
           <tr>
             <th>Név</th>
+            <th>ID</th>
             <th>Leírás</th>
             <th>Ár (Ft)</th>
-            <th>Törlés</th>
-            <th>Modósítás</th>
           </tr>
         </thead>
         <tbody>
           {data?.map((data) => (
             <tr key={data.id}>
               <td>{data.nev}</td>
+              <td>{data.id}</td>
               <td>{data.leiras}</td>
               <td>{data.ar}</td>
-              <td>
-                <button>Törlés</button>
-              </td>
-              <td>
-                <button>Modósítás</button>
-              </td>
             </tr>
           ))}
         </tbody>

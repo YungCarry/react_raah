@@ -16,7 +16,7 @@ root.render(<React.StrictMode>
   <Route path="termek/:id" element={<Termek />} />
   <Route path="termekek" element={<Termekek/>}></Route>
   <Route path="*" element={<h1>404, Not Found</h1>}></Route>
-  <Route path="termekput" element={<TermekPost/>}></Route>
+  <Route path="termekpost" element={<TermekPost/>}></Route>
 
 </Routes>
 </BrowserRouter>
